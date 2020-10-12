@@ -1,0 +1,66 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="wipro.pmschaltfeld.controller.View2">
+	<Page title="Hierarichy" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<Panel class="panel sapUiResponsiveMargin" width="auto">
+				
+			<Table class="table" inset="true" id="suppTab" items="{/flocEquiSet}" growing="true" growingThreshold="20">
+				<!--mode = "MultiSelect" itemPress = "onItemPress"-->
+				<headerToolbar>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://excel-attachment" press="onExcel" activeIcon="sap-icon://excel-attachment"/>
+				       	<Button icon="sap-icon://pdf-attachment" press="onPdf" activeIcon="sap-icon://pdf-attachment"/>
+						<Button icon="sap-icon://filter" press="onFilter"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column hAlign="Center" width="10%" minScreenWidth="Tablet" demandPopin="false">
+						<header>
+							<Text text="Order"/>
+						</header>
+					</Column>
+					<Column hAlign="Center" width="10%" minScreenWidth="Tablet" demandPopin="false">
+						<header>
+							<Text text="Type"/>
+						</header>
+					</Column>
+					<Column minScreenWidth="Tablet" hAlign="Center" width="20%">
+						<header>
+							<Text text="Class Type"/>
+						</header>
+					</Column>
+					<Column width="50%">
+						<header>
+							<Text text="Location"/>
+						</header>
+					</Column>
+						<Column width="50%">
+						<header>
+							<Text text="Description"/>
+						</header>
+					</Column>
+						<Column minScreenWidth="Tablet" width="30%" demandPopin="true">
+						<header>
+							<Text text="Class"/>
+						</header>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem vAlign="Middle">
+						<!--type = "Navigation"	>-->
+						<cells>
+							<Text text="{Order}"/>
+							<!--showValueHelp="true" valueHelpRequest="onF4Help"></Text>-->
+							<Text text="{Type}"/>
+							<Text text="{Klassenart}"/>
+							<Text text="{Tplnr}"/>
+							<Text text="{Pltxt}"/>
+						   <Text text="{Klasse}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>
