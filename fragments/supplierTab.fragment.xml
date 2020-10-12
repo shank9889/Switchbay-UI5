@@ -1,0 +1,53 @@
+<core:FragmentDefinition xmlns:core= "sap.ui.core" xmlns="sap.m"
+    >
+	
+		<Table id = "suppTab" items="{/ProductSet}" >
+		<!--mode = "MultiSelect" itemPress = "onItemPress"-->
+		
+			
+			<headerToolbar>
+				<Toolbar>
+					<ToolbarSpacer/>
+					<Button icon = "sap-icon://filter" press = "onFilter" />
+				</Toolbar>
+			</headerToolbar>
+				  					<columns>
+				  					<Column>
+				  						<header>
+				  							<Text text = "PRODUCT_ID"></Text>
+				  						</header>
+				  					</Column>
+				  					<Column>
+				  						<header>
+				  							<Text text = "NAME"></Text>
+				  						</header>
+				  					</Column>
+				  					<Column minScreenWidth = "Tablet" >
+				  						<header>
+				  							<Text text = "CATEGORY"></Text>
+				  						</header>
+				  					</Column>
+				  					
+				  					<Column minScreenWidth = "Tablet" demandPopin = "true">
+				  						<header>
+				  							<Text text = "PRICE "></Text>
+				  						</header>
+				  					</Column>
+				  					</columns>
+				  					
+				  					<items>
+				  						<ColumnListItem >
+				  						<!--type = "Navigation"	>-->
+				  							<cells>
+				  								<Text text = "{PRODUCT_ID}"></Text>
+				  								<!--showValueHelp="true" valueHelpRequest="onF4Help"></Text>-->
+				  								<Text text = "{NAME}"></Text>
+				  								<Text text = "{CATEGORY}"></Text>
+				  								<Text text = "{PRICE} {CURRENCY}"></Text>
+				  							</cells>
+				  						</ColumnListItem>
+				  					</items>
+				  					
+				  				</Table>
+				  				
+</core:FragmentDefinition>
